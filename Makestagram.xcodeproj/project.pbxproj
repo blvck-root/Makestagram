@@ -12,6 +12,7 @@
 		44166DBF1F5B0C8B00677D2F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44166DBE1F5B0C8B00677D2F /* Post.swift */; };
 		44166DC11F5B186A00677D2F /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44166DC01F5B186A00677D2F /* UIImage+Size.swift */; };
 		44166DC31F5B1D4900677D2F /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44166DC21F5B1D4900677D2F /* StorageReference+Post.swift */; };
+		44166DC71F5B47BD00677D2F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44166DC61F5B47BD00677D2F /* Home.storyboard */; };
 		441724B41F548F4B009C2DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441724B21F548F4B009C2DB1 /* LaunchScreen.storyboard */; };
 		441724B51F548F4B009C2DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441724B31F548F4B009C2DB1 /* Main.storyboard */; };
 		441724B81F548F5A009C2DB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 441724B61F548F5A009C2DB1 /* GoogleService-Info.plist */; };
@@ -37,6 +38,7 @@
 		44166DBE1F5B0C8B00677D2F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
 		44166DC01F5B186A00677D2F /* UIImage+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Size.swift"; path = "Extensions/UIImage+Size.swift"; sourceTree = "<group>"; };
 		44166DC21F5B1D4900677D2F /* StorageReference+Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "Extensions/StorageReference+Post.swift"; sourceTree = "<group>"; };
+		44166DC61F5B47BD00677D2F /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Storyboards/Home.storyboard; sourceTree = "<group>"; };
 		441724B21F548F4B009C2DB1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Storyboards/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		441724B31F548F4B009C2DB1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
 		441724B61F548F5A009C2DB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				441724B31F548F4B009C2DB1 /* Main.storyboard */,
 				44FB69D51F557E42001FF0FC /* Login.storyboard */,
+				44166DC61F5B47BD00677D2F /* Home.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				441724B51F548F4B009C2DB1 /* Main.storyboard in Resources */,
 				441724B81F548F5A009C2DB1 /* GoogleService-Info.plist in Resources */,
 				4491D63C1F5382510016D80D /* Assets.xcassets in Resources */,
+				44166DC71F5B47BD00677D2F /* Home.storyboard in Resources */,
 				44FB69D61F557E42001FF0FC /* Login.storyboard in Resources */,
 				441724B41F548F4B009C2DB1 /* LaunchScreen.storyboard in Resources */,
 			);
