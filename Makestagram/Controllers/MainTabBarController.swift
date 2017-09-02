@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 class MainTabBarController: UITabBarController {
     
     // MARK: - Properties
@@ -18,19 +19,16 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         photoHelper.completionHandler = { image in
-            print("handle image")
+            PostService.create(for: image)
         }
         
         delegate = self
-        if #available(iOS 10.0, *) {
-            tabBar.unselectedItemTintColor = .black
-        } else {
-            // Fallback on earlier versions
-        }
+        tabBar.unselectedItemTintColor = .black
     }
     
 }
 
+@available(iOS 10.0, *)
 extension MainTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController.tabBarItem.tag == 1 {
