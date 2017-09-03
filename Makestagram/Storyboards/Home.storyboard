@@ -24,18 +24,32 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostImageCell" id="YFg-BO-a0K">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostImageCell" rowHeight="375" id="YFg-BO-a0K" customClass="PostImageCell" customModule="Makestagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YFg-BO-a0K" id="u7U-IU-aAJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Kk-Rh-Q4d">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="9Kk-Rh-Q4d" secondAttribute="trailing" id="0YN-WK-XZW"/>
+                                                <constraint firstItem="9Kk-Rh-Q4d" firstAttribute="leading" secondItem="u7U-IU-aAJ" secondAttribute="leading" id="Nat-NB-TgR"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Kk-Rh-Q4d" secondAttribute="bottom" id="tl0-J5-7C3"/>
+                                                <constraint firstItem="9Kk-Rh-Q4d" firstAttribute="top" secondItem="u7U-IU-aAJ" secondAttribute="top" id="zFV-To-7RG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postImageView" destination="9Kk-Rh-Q4d" id="8Eo-Uu-cgb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="sFe-zG-XcT" id="7MY-YS-Ab5"/>
-                                    <outlet property="delegate" destination="sFe-zG-XcT" id="2xk-aL-NVS"/>
+                                    <outlet property="delegate" destination="sFe-zG-XcT" id="WUh-hp-HNb"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -59,7 +73,7 @@
         <!--Navigation Controller-->
         <scene sceneID="WRj-qx-EVX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ug0-qZ-Gjt" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ug0-qZ-Gjt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_home_black" id="gYx-2E-VcR">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
                     </tabBarItem>
