@@ -28,6 +28,8 @@
 		4491D6351F5382510016D80D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4491D6341F5382510016D80D /* AppDelegate.swift */; };
 		4491D63C1F5382510016D80D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4491D63B1F5382510016D80D /* Assets.xcassets */; };
 		44B842BB1F5C3CBC00A4B60E /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B842BA1F5C3CBC00A4B60E /* PostImageCell.swift */; };
+		44D18B8A1F5C6A4E002E8FD0 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D18B891F5C6A4E002E8FD0 /* PostHeaderCell.swift */; };
+		44D18B8C1F5C6EA9002E8FD0 /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D18B8B1F5C6EA9002E8FD0 /* PostActionCell.swift */; };
 		44FB69D41F557E38001FF0FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB69D31F557E38001FF0FC /* LoginViewController.swift */; };
 		44FB69D61F557E42001FF0FC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FB69D51F557E42001FF0FC /* Login.storyboard */; };
 		E66A887A2225DB81C3D6470C /* Pods_Makestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C73C24EE077F5254854E64A /* Pods_Makestagram.framework */; };
@@ -57,6 +59,8 @@
 		4491D6341F5382510016D80D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4491D63B1F5382510016D80D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44B842BA1F5C3CBC00A4B60E /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = Views/PostImageCell.swift; sourceTree = "<group>"; };
+		44D18B891F5C6A4E002E8FD0 /* PostHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostHeaderCell.swift; path = Views/PostHeaderCell.swift; sourceTree = "<group>"; };
+		44D18B8B1F5C6EA9002E8FD0 /* PostActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostActionCell.swift; path = Views/PostActionCell.swift; sourceTree = "<group>"; };
 		44FB69D31F557E38001FF0FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		44FB69D51F557E42001FF0FC /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		5A0F00F87B46AFCAAC418944 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				44B842BA1F5C3CBC00A4B60E /* PostImageCell.swift */,
+				44D18B891F5C6A4E002E8FD0 /* PostHeaderCell.swift */,
+				44D18B8B1F5C6EA9002E8FD0 /* PostActionCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				44577F2B1F5733510099F4F5 /* UserService.swift in Sources */,
 				44577F381F58AFAE0099F4F5 /* MainTabBarController.swift in Sources */,
 				44577F2D1F57336C0099F4F5 /* User.swift in Sources */,
+				44D18B8C1F5C6EA9002E8FD0 /* PostActionCell.swift in Sources */,
 				44166DBF1F5B0C8B00677D2F /* Post.swift in Sources */,
 				44B842BB1F5C3CBC00A4B60E /* PostImageCell.swift in Sources */,
 				44166DC11F5B186A00677D2F /* UIImage+Size.swift in Sources */,
@@ -366,6 +373,7 @@
 				44FB69D41F557E38001FF0FC /* LoginViewController.swift in Sources */,
 				44166DBD1F5AC03F00677D2F /* PostService.swift in Sources */,
 				44577F2F1F575C110099F4F5 /* Constants.swift in Sources */,
+				44D18B8A1F5C6A4E002E8FD0 /* PostHeaderCell.swift in Sources */,
 				4491D6351F5382510016D80D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
