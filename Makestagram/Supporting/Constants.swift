@@ -23,9 +23,10 @@ struct Constants {
         static let PostHeaderCell = "PostHeaderCell"
         static let PostImageCell = "PostImageCell"
         static let PostActionCell = "PostActionCell"
+        static let FindFriendsCell = "FindFriendsCell"
     }
     
-    struct firebaseNodes {
+    struct FirebaseNodes {
         static let users = "users"
         static let posts = "posts"
         static let postLikes = "postLikes"

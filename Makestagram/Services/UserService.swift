@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 struct UserService {
     static func show(forUID uid: String, completion: @escaping (User?) -> Void) {
-        let ref = Database.database().reference().child(Constants.firebaseNodes.users).child(uid)
+        let ref = Database.database().reference().child(Constants.FirebaseNodes.users).child(uid)
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let user = User(snapshot: snapshot) else {
@@ -26,7 +26,7 @@ struct UserService {
     static func create(_ firUser: FIRUser, username: String, completion: @escaping (User?) -> Void) {
         let userAttrs = ["username": username]
         
-        let ref = Database.database().reference().child(Constants.firebaseNodes.users).child(firUser.uid)
+        let ref = Database.database().reference().child(Constants.FirebaseNodes.users).child(firUser.uid)
         ref.setValue(userAttrs) { (error, ref) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
@@ -41,7 +41,7 @@ struct UserService {
     }
     
     static func posts(for user: User, completion: @escaping ([Post]) -> Void) {
-        let ref = Database.database().reference().child(Constants.firebaseNodes.posts).child(user.uid)
+        let ref = Database.database().reference().child(Constants.FirebaseNodes.posts).child(user.uid)
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
@@ -72,6 +72,35 @@ struct UserService {
             })
         })
     }
+    
+    static func usersExcludingCurrentUser(completion: @escaping ([User]) -> Void) {
+        let currentUser = User.current
+        let ref = Database.database().reference().child(Constants.FirebaseNodes.users)
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
+                else { return completion([]) }
+            
+            let users =
+            snapshot
+            .flatMap(User.init)
+                .filter { $0.uid != currentUser.uid }
+            
+            let dispacthGroup = DispatchGroup()
+            users.forEach { (user) in
+                dispacthGroup.enter()
+                
+                FollowService.isUserFollowed(user) { (isFollowed) in
+                    user.isFollowed = isFollowed
+                    dispacthGroup.leave()
+                }
+            }
+                dispacthGroup.notify(queue: .main, execute: {
+                    completion(users)
+                })
+        })
+    }
+        
 }
 
 

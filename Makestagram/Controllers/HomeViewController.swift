@@ -138,7 +138,5 @@ extension HomeViewController: PostActionCellDelegate {
         DispatchQueue.main.async {
             self.configureCell(cell, with: post)
         }
-        
-        print("did tap like button")
     }
 }

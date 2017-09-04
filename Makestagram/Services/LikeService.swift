@@ -17,14 +17,14 @@ struct LikeService {
         
         let currentUID = User.current.uid
         
-        let likesRef = Database.database().reference().child(Constants.firebaseNodes.postLikes).child(key).child(currentUID)
+        let likesRef = Database.database().reference().child(Constants.FirebaseNodes.postLikes).child(key).child(currentUID)
         likesRef.setValue(true) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
                 return success(false)
             }
             
-            let likeCountRef = Database.database().reference().child(Constants.firebaseNodes.posts).child(post.poster.uid).child(key).child("like_count")
+            let likeCountRef = Database.database().reference().child(Constants.FirebaseNodes.posts).child(post.poster.uid).child(key).child("like_count")
             likeCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
                 let currentCount = mutableData.value as? Int ?? 0
                 
@@ -49,7 +49,7 @@ struct LikeService {
         
         let currentUID = User.current.uid
         
-        let likesRef = Database.database().reference().child(Constants.firebaseNodes.postLikes).child(key).child(currentUID)
+        let likesRef = Database.database().reference().child(Constants.FirebaseNodes.postLikes).child(key).child(currentUID)
         // .setValue(nil)
         likesRef.removeValue() { (error, _) in
             if let error = error {
@@ -57,7 +57,7 @@ struct LikeService {
                 return success(false)
             }
             
-            let likeCountRef = Database.database().reference().child(Constants.firebaseNodes.posts).child(post.poster.uid).child(key).child("like_count")
+            let likeCountRef = Database.database().reference().child(Constants.FirebaseNodes.posts).child(post.poster.uid).child(key).child("like_count")
             likeCountRef.runTransactionBlock({ (mutableData) -> TransactionResult in
                 let currentCount = mutableData.value as? Int ?? 0
                 
@@ -81,7 +81,7 @@ struct LikeService {
             return completion(false)
         }
         
-        let likesRef = Database.database().reference().child(Constants.firebaseNodes.postLikes).child(postKey)
+        let likesRef = Database.database().reference().child(Constants.FirebaseNodes.postLikes).child(postKey)
         likesRef.queryEqual(toValue: nil, childKey: User.current.uid).observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? [String: Bool] {
                 completion(true)

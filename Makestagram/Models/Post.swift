@@ -10,6 +10,7 @@ import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 
 class Post {
+    var isFollowing = false
     var isLiked = false
     var likeCount: Int
     let poster: User

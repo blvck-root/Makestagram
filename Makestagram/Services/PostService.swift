@@ -30,7 +30,7 @@ struct PostService {
         let post = Post(imageURL: urlString, imageHeight: aspectHeight)
         let dict = post.dictValue
         
-        let postRef = Database.database().reference().child("posts").child(currentUser.uid).childByAutoId()
+        let postRef = Database.database().reference().child(Constants.FirebaseNodes.posts).child(currentUser.uid).childByAutoId()
         postRef.updateChildValues(dict)
     }
 }
