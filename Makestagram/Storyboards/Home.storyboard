@@ -98,6 +98,7 @@
                                                         <constraint firstAttribute="width" secondItem="rHL-xD-Ht3" secondAttribute="height" multiplier="1:1" id="bEA-O2-pLR"/>
                                                     </constraints>
                                                     <state key="normal" image="btn_heart_black_outline"/>
+                                                    <state key="selected" image="btn_heart_red_solid"/>
                                                     <connections>
                                                         <action selector="likeButtonTapped:" destination="Uax-id-lku" eventType="touchUpInside" id="3qs-C9-oN5"/>
                                                     </connections>
@@ -138,6 +139,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="likeButton" destination="rHL-xD-Ht3" id="6Oo-D9-kgn"/>
                                             <outlet property="likesCountLabel" destination="1oR-iF-klk" id="sXs-Ao-rLP"/>
                                             <outlet property="timestampLabel" destination="Zjc-Sx-cdO" id="ydc-Qd-9oi"/>
                                         </connections>
@@ -159,12 +161,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Makestagram" id="eE7-m6-oeN"/>
                     <connections>
-                        <outlet property="tableView" destination="dyc-xm-TUN" id="kse-dG-8ay"/>
+                        <outlet property="tableView" destination="dyc-xm-TUN" id="uwO-Od-hJo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qY2-fE-gwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.79999999999995" y="-525.78710644677665"/>
+            <point key="canvasLocation" x="673" y="-525"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WRj-qx-EVX">
@@ -191,6 +193,7 @@
     </scenes>
     <resources>
         <image name="btn_heart_black_outline" width="24" height="24"/>
+        <image name="btn_heart_red_solid" width="24" height="24"/>
         <image name="btn_options_black" width="24" height="24"/>
         <image name="tab_home_black" width="25" height="25"/>
     </resources>

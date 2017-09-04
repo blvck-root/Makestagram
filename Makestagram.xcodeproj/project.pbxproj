@@ -30,6 +30,7 @@
 		44B842BB1F5C3CBC00A4B60E /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B842BA1F5C3CBC00A4B60E /* PostImageCell.swift */; };
 		44D18B8A1F5C6A4E002E8FD0 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D18B891F5C6A4E002E8FD0 /* PostHeaderCell.swift */; };
 		44D18B8C1F5C6EA9002E8FD0 /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D18B8B1F5C6EA9002E8FD0 /* PostActionCell.swift */; };
+		44D18B8E1F5CC206002E8FD0 /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D18B8D1F5CC206002E8FD0 /* LikeService.swift */; };
 		44FB69D41F557E38001FF0FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB69D31F557E38001FF0FC /* LoginViewController.swift */; };
 		44FB69D61F557E42001FF0FC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FB69D51F557E42001FF0FC /* Login.storyboard */; };
 		E66A887A2225DB81C3D6470C /* Pods_Makestagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C73C24EE077F5254854E64A /* Pods_Makestagram.framework */; };
@@ -61,6 +62,7 @@
 		44B842BA1F5C3CBC00A4B60E /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = Views/PostImageCell.swift; sourceTree = "<group>"; };
 		44D18B891F5C6A4E002E8FD0 /* PostHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostHeaderCell.swift; path = Views/PostHeaderCell.swift; sourceTree = "<group>"; };
 		44D18B8B1F5C6EA9002E8FD0 /* PostActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostActionCell.swift; path = Views/PostActionCell.swift; sourceTree = "<group>"; };
+		44D18B8D1F5CC206002E8FD0 /* LikeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeService.swift; path = Services/LikeService.swift; sourceTree = "<group>"; };
 		44FB69D31F557E38001FF0FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		44FB69D51F557E42001FF0FC /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Storyboards/Login.storyboard; sourceTree = "<group>"; };
 		5A0F00F87B46AFCAAC418944 /* Pods-Makestagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makestagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Makestagram/Pods-Makestagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				44577F2A1F5733510099F4F5 /* UserService.swift */,
 				44166DBA1F5ABC1600677D2F /* StorageService.swift */,
 				44166DBC1F5AC03F00677D2F /* PostService.swift */,
+				44D18B8D1F5CC206002E8FD0 /* LikeService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				44577F381F58AFAE0099F4F5 /* MainTabBarController.swift in Sources */,
 				44577F2D1F57336C0099F4F5 /* User.swift in Sources */,
 				44D18B8C1F5C6EA9002E8FD0 /* PostActionCell.swift in Sources */,
+				44D18B8E1F5CC206002E8FD0 /* LikeService.swift in Sources */,
 				44166DBF1F5B0C8B00677D2F /* Post.swift in Sources */,
 				44B842BB1F5C3CBC00A4B60E /* PostImageCell.swift in Sources */,
 				44166DC11F5B186A00677D2F /* UIImage+Size.swift in Sources */,

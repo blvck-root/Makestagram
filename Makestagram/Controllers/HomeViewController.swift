@@ -73,14 +73,21 @@ extension HomeViewController: UITableViewDataSource {
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cells.PostActionCell, for: indexPath) as! PostActionCell
-            // set timeAgoLabel.text
-            cell.timestampLabel.text = timestampFormatter.string(from: post.creationDate)
+            cell.delegate = self
+            configureCell(cell, with: post)
             
             return cell
             
         default:
             fatalError("Error: unexpected indexPath.")
         }
+    }
+    
+    func configureCell(_ cell: PostActionCell, with post: Post) {
+        cell.likesCountLabel.text = "\(post.likeCount) likes"
+        // set timeAgoLabel.text
+        cell.timestampLabel.text = timestampFormatter.string(from: post.creationDate)
+        cell.likeButton.isSelected = post.isLiked
     }
 }
 
@@ -101,5 +108,37 @@ extension HomeViewController: UITableViewDelegate {
         default:
             fatalError()
         }
+    }
+}
+
+// MARK: - PostActionCellDelegate
+
+extension HomeViewController: PostActionCellDelegate {
+    func didTapLikeButton(_ likeButton: UIButton, on cell: PostActionCell) {
+        guard let indexPath = tableView.indexPath(for: cell)
+        else { return }
+        
+        likeButton.isUserInteractionEnabled = false
+        let post = posts[indexPath.section]
+        
+        LikeService.setIsLiked(!post.isLiked, for: post) { (success) in
+            defer {
+               likeButton.isUserInteractionEnabled = true
+            }
+            
+            guard success else { return }
+        }
+        
+        post.likeCount += !post.isLiked ? 1 : -1
+        post.isLiked = !post.isLiked
+        
+        guard let cell = self.tableView.cellForRow(at: indexPath) as? PostActionCell
+            else { return }
+        
+        DispatchQueue.main.async {
+            self.configureCell(cell, with: post)
+        }
+        
+        print("did tap like button")
     }
 }
